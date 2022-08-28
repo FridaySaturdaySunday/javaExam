@@ -6,7 +6,7 @@ public class Practice1 {
 
 	private Scanner sc = new Scanner(System.in);
 
-	// 숫자 입력받아 짝수입니다/홀수입니다/0입니다.
+	// 숫자 입력받아 짝수입니다/홀수입니다/0입니다
 	// 총 10회 반복해주세요.
 	public void practice1_1() {
 		
