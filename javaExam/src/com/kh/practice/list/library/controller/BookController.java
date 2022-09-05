@@ -2,7 +2,7 @@ package com.kh.practice.list.library.controller;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
+import java.util.Comparator;
 
 import com.kh.practice.list.library.model.vo.Book;
 
@@ -57,11 +57,13 @@ public class BookController {
 	
 	public int ascBook() { // 책 명 오름차순 정렬하는 메소드
 		// 책 이름으로 오름차순 후 1 반환
-//		Collections.sort(bookList); TODO
+//		Collections.sort(bookList);	
 		return 1;
 	}
-	
-	
+//	Collections.sort(bookList) : 오름차순
+//	Collections.sort(bookList.reverseOrder()) : 내림차순
+//	bookList.sort(Comparator.naturalOrder()) : 오름차순 
+//	bookList.sort(Comparator.reverseOrder()) : 내림차순
 	
 	
 	
