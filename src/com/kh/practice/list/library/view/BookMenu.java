@@ -27,7 +27,7 @@ public class BookMenu {
 			System.out.println("9. 종료");
 			System.out.print("메뉴 번호 입력 : ");
 
-			int num = sc.nextInt();
+			int num = sc.nextInt(); // nextInt() -> 사용 후 버퍼 비워야함
 			if (num < 1 || (num > 5 && num < 9) || num > 9) {
 				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요");
 			}
