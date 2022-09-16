@@ -32,13 +32,13 @@ public class BookMenu {
 				System.out.println("잘못 입력하셨습니다. 다시 입력해주세요");
 			}
 			switch (num) {
-			case 1: insertBook(); break;
-			case 2: selectList(); break;
-			case 3: searchBook(); break;
-			case 4: deleteBook(); break;
-			case 5: ascBook(); break;
-			case 9: System.out.println("프로그램을 종료합니다."); return;
-			default: break;
+				case 1: insertBook(); break;
+				case 2: selectList(); break;
+				case 3: searchBook(); break;
+				case 4: deleteBook(); break;
+				case 5: ascBook(); break;
+				case 9: System.out.println("프로그램을 종료합니다."); return;
+				default: break;
 			}
 			sc.nextLine(); // 버퍼비우기
 		}
@@ -58,11 +58,11 @@ public class BookMenu {
 		int num = sc.nextInt();
 		String category = null;
 		switch (num) {
-		case 1: category = "인문"; break;
-		case 2: category = "과학"; break;
-		case 3: category = "외국어"; break;
-		case 4: category = "기타"; break;
-		default: break;
+			case 1: category = "인문"; break;
+			case 2: category = "과학"; break;
+			case 3: category = "외국어"; break;
+			case 4: category = "기타"; break;
+			default: break;
 		}
 		System.out.print("가격 : ");
 		int price = sc.nextInt();
@@ -80,8 +80,8 @@ public class BookMenu {
 		if (bookList.isEmpty()) {
 			System.out.println("존재하는 도서가 없습니다.");
 		} else {
-			for (Book bk : bookList) {
-				System.out.println(bk);
+			for (Book b : bookList) {
+				System.out.println(b);
 			}
 		}
 	}

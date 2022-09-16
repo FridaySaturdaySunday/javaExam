@@ -7,9 +7,9 @@ public class Book {
 	private String category;
 	private int price;
 	
-	public Book() {}
+	public Book() {} // 기본생성자
 	
-	public Book(String title, String author, String category, int price) {
+	public Book(String title, String author, String category, int price) { // 매개변수 있는 생성자
 		this.title = title;
 		this.author = author;
 		this.category = category;
@@ -17,49 +17,18 @@ public class Book {
 	}
 
 	@Override
-	public String toString() {
+	public String toString() { // 객체의 정보를 리턴하는 메소드
 		return "(" + title + "/" + author + "/" + category + "/" + price + ")";
 	}
 
-
 	@Override
 	public int hashCode() { // 해시코드를 리턴하는 메소드
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((author == null) ? 0 : author.hashCode());
-		result = prime * result + ((category == null) ? 0 : category.hashCode());
-		result = prime * result + price;
-		result = prime * result + ((title == null) ? 0 : title.hashCode());
-		return result;
+		return super.hashCode();
 	}
 
 	@Override
-	public boolean equals(Object obj) { //객체가 같은지 여부를 리턴하는 메소드
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Book other = (Book) obj;
-		if (author == null) {
-			if (other.author != null)
-				return false;
-		} else if (!author.equals(other.author))
-			return false;
-		if (category == null) {
-			if (other.category != null)
-				return false;
-		} else if (!category.equals(other.category))
-			return false;
-		if (price != other.price)
-			return false;
-		if (title == null) {
-			if (other.title != null)
-				return false;
-		} else if (!title.equals(other.title))
-			return false;
-		return true;
+	public boolean equals(Object obj) { // 객체가 같은지 여부를 리턴하는 메소드
+		return super.equals(obj);
 	}
 	
 	public int compareTo(Object o) { // 정렬 기준을 가지고 있는 메소드
