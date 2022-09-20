@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import com.kh.practice.list.library.model.vo.Book;
 
@@ -59,7 +60,13 @@ public class BookController {
 	public int ascBook() { // 책 명 오름차순 정렬하는 메소드
 		// 책 이름으로 오름차순 후 1 반환
 //		Collections.sort(bookList);	
-		return 1;
+		int result = 0;
+		
+		bookList = (ArrayList<Book>) bookList.stream().sorted(Comparator.comparing(Book::getTitle)).collect(Collectors.toList());
+		
+		System.out.println(bookList);
+		result = 1;
+		return result;
 	}
 //	Collections.sort(bookList) : 오름차순
 //	Collections.sort(bookList.reverseOrder()) : 내림차순

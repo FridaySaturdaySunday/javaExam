@@ -56,6 +56,7 @@ public class BookMenu {
 		String author = sc.nextLine();
 		System.out.print("장르(1. 인문 / 2. 과학 / 3. 외국어 / 4. 기타) : ");
 		int num = sc.nextInt();
+		sc.nextLine();
 		String category = null;
 		switch (num) {
 			case 1: category = "인문"; break;
@@ -106,7 +107,7 @@ public class BookMenu {
 	}
 
 	// 4. 도서 삭제용 view 메소드
-	public void deleteBook() { // 특정 도서 삭제 성공을 알리는 메소드 //TODO 오류남!!!!!!!!!!!!!!!!!
+	public void deleteBook() { // 특정 도서 삭제 성공을 알리는 메소드 //TODO 오류남★★★★★★★★★★★★★★
 		sc.nextLine();
 		System.out.println("===== 도서 삭제 =====");
 		System.out.print("삭제할 도서 명 : ");
